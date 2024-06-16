@@ -18,12 +18,7 @@ server.port=8080
 
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
-spring.datasource.url: URL de conexión JDBC para la base de datos MySQL.
-spring.datasource.username: Nombre de usuario de la base de datos.
-spring.datasource.password: Contraseña del usuario de la base de datos.
-spring.jpa.generate-ddl: Habilita la generación automática del esquema de base de datos por Hibernate.
-spring.jpa.hibernate.ddl-auto: Estrategia para la generación del esquema de base de datos por Hibernate.
-server.port: Puerto en el que se ejecutará la aplicación Spring Boot.
+
 logging.level.org.hibernate.SQL: Nivel de registro para las consultas SQL ejecutadas por Hibernate (DEBUG).
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder: Nivel de registro para los enlazadores de parámetros SQL (TRACE).
 
