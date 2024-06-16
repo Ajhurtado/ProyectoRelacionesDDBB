@@ -26,6 +26,8 @@ spring.jpa.hibernate.ddl-auto: Estrategia para la generación del esquema de bas
 server.port: Puerto en el que se ejecutará la aplicación Spring Boot.
 logging.level.org.hibernate.SQL: Nivel de registro para las consultas SQL ejecutadas por Hibernate (DEBUG).
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder: Nivel de registro para los enlazadores de parámetros SQL (TRACE).
+
+```
 Estructura del Proyecto
 Package repositories
 Contiene interfaces que extienden JpaRepository para cada una de las entidades (Person, Passport, Trip). Estas interfaces permiten la interacción con la base de datos mediante métodos CRUD estándar.
@@ -36,6 +38,7 @@ Contiene las entidades principales del proyecto:
 Person: Representa una persona con atributos como nombre, apellido y relaciones como Passport y una lista de Trip.
 Passport: Representa el pasaporte de una persona con un número de pasaporte y una relación OneToOne con Person.
 Trip: Representa un viaje con destino, fecha y una relación ManyToOne con Person.
+
 Package services
 Aquí se encuentran las clases de servicio que implementan la lógica de negocio y gestionan la interacción con los repositorios (ServicePerson, ServicePassport, ServiceTrip). Estas clases están anotadas con @Service y utilizan @Autowired para inyectar los repositorios necesarios. Implementan operaciones CRUD y métodos específicos de negocio.
 
