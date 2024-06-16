@@ -47,3 +47,15 @@ Resumen de las Operaciones
 Person: Creación, actualización, eliminación y consulta de personas, gestionando relaciones con Passport y Trip.
 Passport: Gestión del pasaporte de una persona, asociación y desasociación.
 Trip: Gestión de viajes asociados a una persona, creación, actualización y eliminación.
+
+Relacion ManyToMany
+
+Person: Ahora utiliza una relación @ManyToMany con Trip, lo que significa que una persona puede tener varios viajes y un viaje puede incluir varias personas.
+Trip: Utiliza @ManyToMany(mappedBy = "trips") para mapear la relación bidireccional con Person.
+
+ServicePerson: Se modificó para adaptarse a las operaciones con Person, incluyendo la gestión de la relación ManyToMany con Trip.
+ServiceTrip: Adaptado para operaciones con Trip, incluyendo guardar, recuperar, actualizar y eliminar viajes.
+
+Controller: Se ajustó para manejar las operaciones CRUD de Person y Trip, incluyendo la creación, actualización, eliminación y recuperación de entidades.
+
+Main: La aplicación principal ahora demuestra ejemplos de uso con las nuevas configuraciones de Person y Trip.
